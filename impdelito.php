@@ -1,5 +1,5 @@
-﻿<html>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Ordenes</title>
 <style type="text/css">
 .titulo {
@@ -15,26 +15,10 @@
 </body>
 </html>
 
-<style type="text/css">
-body {
-	background-color: #CF9;
-	text-align: center;
-}
-.centro {
-	text-align: center;
-}
-.CENTRO {
-	text-align: center;
-}
-.titulo {
-	font-weight: bold;
-	text-align: center;
-}
-.centrado {
-	text-align: center;
-}
-</style>
+
 <?php
+
+//var_dump($_POST['nombreimp']);
 
 $conn = oci_connect('tg_penaltg', 'tg20170523', 'rpenprod','AL32UTF8');
 if (!$conn) {
@@ -84,7 +68,7 @@ $querypass="SELECT   /*+ USE_HASH(TATP_DELITO,TATP_MATERIA,TG_TRIBUNAL) */
 
  
 
-//echo $querypass;
+echo $querypass;
 
 $stid = oci_parse($conn,$querypass);
 
